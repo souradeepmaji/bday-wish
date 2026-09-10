@@ -1,0 +1,560 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #fff5f7;
+    color: #743b4d;
+}
+
+
+/* =========================
+   WELCOME SCREEN
+========================= */
+
+.screen {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at top left,
+        rgba(255, 200, 215, 0.35),
+        transparent 35%),
+
+        radial-gradient(circle at bottom right,
+        rgba(255, 180, 200, 0.25),
+        transparent 35%);
+
+    padding: 30px;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.small-text {
+    font-size: 18px;
+    color: #9b6875;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: clamp(45px, 7vw, 70px);
+    margin: 10px 0 40px;
+    color: #743b4d;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    border: none;
+
+    padding: 17px 35px;
+
+    border-radius: 50px;
+
+    background: #8c455b;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(120, 50, 75, 0.25);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 25px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff1f4,
+            #ffe9ee
+        );
+}
+
+.hero h2 {
+    font-size: clamp(42px, 8vw, 75px);
+
+    margin: 10px 0 25px;
+
+    color: #743b4d;
+}
+
+.hero h2 span {
+    color: #b44361;
+}
+
+.hero-text {
+    max-width: 600px;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    color: #895466;
+}
+
+.floating-heart {
+    font-size: 70px;
+
+    animation: floatHeart 2.5s ease-in-out infinite;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.memories,
+.message-section,
+.wishes,
+.final-section {
+    padding: 90px 25px;
+
+    text-align: center;
+}
+
+.memories {
+    background: #fff8fa;
+}
+
+.message-section {
+    background: #ffeef2;
+}
+
+.wishes {
+    background: #fff8fa;
+}
+
+.final-section {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffeef2,
+            #ffdfe7
+        );
+}
+
+h3 {
+    font-size: 38px;
+
+    margin-bottom: 15px;
+
+    color: #743b4d;
+}
+
+.section-text {
+    font-size: 18px;
+
+    color: #986575;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   PHOTO GRID
+========================= */
+
+.photo-grid {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.photo-card {
+    background: white;
+
+    padding: 12px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(110, 50, 70, 0.12);
+
+    transform:
+        rotate(-1deg);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.photo-card:nth-child(2) {
+    transform:
+        rotate(1deg);
+}
+
+.photo-card:hover {
+    transform:
+        translateY(-8px)
+        rotate(0deg);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.photo-card p {
+    margin: 15px 0 8px;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   MESSAGE CARD
+========================= */
+
+.message-card {
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 50px 40px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(100, 40, 60, 0.12);
+
+    line-height: 1.8;
+
+    font-size: 18px;
+}
+
+.envelope {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.signature {
+    margin-top: 30px;
+
+    font-size: 23px;
+
+    color: #a23f5a;
+}
+
+
+/* =========================
+   WISHES
+========================= */
+
+.wish-container {
+    max-width: 850px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.wish {
+    padding: 30px 15px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 25px rgba(100, 40, 60, 0.08);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.wish:hover {
+    transform: translateY(-8px);
+}
+
+.wish span {
+    font-size: 35px;
+}
+
+.wish p {
+    margin-bottom: 0;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final-content {
+    text-align: center;
+}
+
+.final-content > p:first-child {
+    font-size: 20px;
+}
+
+.final-content h2 {
+    margin: 10px 0;
+
+    font-size: clamp(38px, 7vw, 65px);
+
+    color: #743b4d;
+}
+
+.big-heart {
+    font-size: 90px;
+
+    margin: 30px 0;
+
+    animation:
+        heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.final-small {
+    font-size: 22px;
+
+    color: #91485e;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-placeholder {
+        height: 280px;
+    }
+
+    .wish-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .message-card {
+        padding: 35px 25px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .wish-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+}
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+#musicButton {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    width: 55px;
+    height: 55px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background: #8c455b;
+
+    color: white;
+
+    font-size: 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 8px 20px rgba(100, 40, 60, 0.25);
+
+    z-index: 1000;
+}
+
+#musicButton:hover {
+    transform: scale(1.1);
+}
+/* =========================
+   FINAL SURPRISE
+========================= */
+
+.final-intro {
+    font-size: 20px;
+    color: #986575;
+}
+
+.final-button {
+    margin-top: 30px;
+}
+
+.hidden-message {
+    display: none;
+}
+
+.hidden-message.show {
+    display: block;
+
+    animation: messageReveal 1s ease forwards;
+}
+
+.final-message {
+    max-width: 650px;
+
+    margin: 45px auto 0;
+
+    padding: 40px 30px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(100, 40, 60, 0.12);
+
+    font-size: 19px;
+
+    line-height: 1.8;
+}
+
+@keyframes messageReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}

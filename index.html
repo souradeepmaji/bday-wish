@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Aparna ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         WELCOME SCREEN
+    ========================== -->
+
+    <section id="welcome" class="screen">
+
+        <div class="container">
+
+            <p class="small-text">
+                A little surprise for you BABLI...
+            </p>
+
+            <h1>
+                Hey, Birthday Girl ❤️
+            </h1>
+
+            <button onclick="openSurprise()">
+                TAP TO OPEN 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MAIN SURPRISE
+    ========================== -->
+
+    <section id="surprise" class="hidden">
+
+        <!-- HERO -->
+
+        <div class="hero">
+
+            <div class="floating-heart">❤️</div>
+
+            <p class="small-text">
+                Today is all about you...
+            </p>
+
+            <h2>
+                Happy Birthday,
+                <span>Aparna</span> ❤️
+            </h2>
+
+            <p class="hero-text">
+                To the girl who makes ordinary days
+                feel a little more special.
+            </p>
+
+        </div>
+
+
+        <!-- PHOTO SECTION -->
+
+        <section class="memories">
+
+            <h3>Some beautiful memories 📸</h3>
+
+            <p class="section-text">
+                A few moments that deserve to be remembered forever.
+            </p>
+
+            <div class="photo-grid">
+
+                <!-- Replace these with your photos later -->
+
+                <div class="photo-card">
+                    <img src="images/image1.jpg" alt="A beautiful memory">
+                    <p>oyee handsome ❤️</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/image2.jpg" alt="A beautiful memory">
+                    <p>Pujo Pujo bhab ❤️</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/image3.jpg" alt="A beautiful memory">
+                    <p>Meowwwwww ❤️</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MESSAGE -->
+
+        <section class="message-section">
+
+            <div class="message-card">
+
+                <div class="envelope">
+                    💌
+                </div>
+
+                <h3>
+                    A little message for you
+                </h3>
+
+                <p>
+                    Dear Babli,
+                </p>
+
+                <p>
+                    On your special day, I just want you to know
+                    how incredibly special you are.
+                </p>
+
+                <p>
+                    I hope this new year of your life brings you
+                    countless reasons to smile, beautiful memories,
+                    unexpected happiness and everything your heart
+                    wishes for.
+                </p>
+
+                <p>
+                    Keep smiling, keep shining and never stop being
+                    the wonderful person you are.
+                </p>
+
+                <p class="signature">
+                    Happy Birthday BABLI ✨🌸
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- WISHES -->
+
+        <section class="wishes">
+
+            <h3>
+                My wishes for you ✨
+            </h3>
+
+            <div class="wish-container">
+
+                <div class="wish">
+                    <span>🌸</span>
+                    <p>More happiness</p>
+                </div>
+
+                <div class="wish">
+                    <span>✨</span>
+                    <p>Beautiful moments</p>
+                </div>
+
+                <div class="wish">
+                    <span>💫</span>
+                    <p>Big dreams</p>
+                </div>
+
+                <div class="wish">
+                    <span>❤️</span>
+                    <p>Endless love</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL MESSAGE -->
+
+        <section class="final-section">
+
+            <div class="final-content">
+        
+                <p class="final-intro">
+                    Before you go...
+                </p>
+        
+                <h2>
+                    I have one last thing
+                </h2>
+        
+                <h2>
+                    to tell you ❤️
+                </h2>
+        
+                <button class="final-button" onclick="showFinalMessage()">
+                    OPEN ONE LAST SURPRISE 💌
+                </button>
+        
+                <div id="finalMessage" class="final-message hidden-message">
+        
+                    <div class="big-heart">
+                        ❤️
+                    </div>
+        
+                    <p>
+                        Babli,
+                    </p>
+        
+                    <p>
+                        I don't know what the future holds,
+                        but I hope it gives you countless moments
+                        that make you genuinely happy.
+                    </p>
+        
+                    <p>
+                        You deserve beautiful things,
+                        beautiful people,
+                        beautiful memories,
+                        and a life filled with reasons to smile.
+                    </p>
+        
+                    <p>
+                        Never forget how special you are.
+                    </p>
+        
+                    <p class="signature">
+                        Happy Birthday, Babli. ❤️
+                    </p>
+        
+                </div>
+        
+            </div>
+        
+        </section>
+
+            <div class="final-content">
+
+                <p>
+                    And finally...
+                </p>
+
+                <h2>
+                    Stay happy.
+                </h2>
+
+                <h2>
+                    Stay beautiful.
+                </h2>
+
+                <h2>
+                    Stay YOU. ❤️
+                </h2>
+
+                <div class="big-heart">
+                    ❤️
+                </div>
+
+                <p class="final-small">
+                    Happy Birthday, Babli.
+                </p>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <audio id="birthdayMusic" loop>
+        <source src="music/birthdaysong.mp3" type="audio/mpeg">
+    </audio>
+    
+    <button id="musicButton" onclick="toggleMusic()">
+        🎵
+    </button>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
